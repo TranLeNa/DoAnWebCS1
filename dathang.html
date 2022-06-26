@@ -42,6 +42,7 @@
                         <a href="thucdon.html" class="nav-item nav-link">Thực đơn</a>
                         <a href="dathang.html" class="nav-item nav-link">Đặt hàng</a>  
                         <a href="lienhe.html" class="nav-item nav-link">Liên hệ</a>
+                        <a href="dangky.html" class="nav-item nav-link">Đăng kí</a>
                     </div>
                 </div>
             </div>
@@ -85,10 +86,10 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="booking-form">
-                            <form>
+                            <form onsubmit="signup()">
                                 <div class="control-group">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="HỌ VÀ TÊN" required="required" />
+                                        <input id="username" type="text" class="form-control" placeholder="HỌ VÀ TÊN" required="required" />
                                         <div class="input-group-append">
                                             <div class="input-group-text"><i class="far fa-user"></i></div>
                                         </div>
@@ -97,7 +98,7 @@
                                 
                                 <div class="control-group">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="ĐIỆN THOẠI" required="required" />
+                                        <input id="phone" type="text" class="form-control" placeholder="ĐIỆN THOẠI" pattern="^(0[234][0-9]{8}|1[89]00[0-9]{4})$" required="required" />
                                         <div class="input-group-append">
                                             <div class="input-group-text"><i class="fa fa-mobile-alt"></i></div>
                                         </div>
@@ -105,24 +106,24 @@
                                 </div>
                                 <div class="control-group">
                                     <div class="input-group date" id="NGÀY" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="NGÀY" data-target="#date" data-toggle="datetimepicker"/>
+                                        <input type="date" min="2019-01-01" max="2050-12-31" class="form-control datetimepicker-input" data-target="#date" data-toggle="datetimepicker"/>
                                 <div class="input-group-append" data-target="#date" data-toggle="datetimepicker">
-                                            <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                                            <div class="input-group-text"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <div class="input-group time" id="THỜI GIAN" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="THỜI GIAN" data-target="#time" data-toggle="datetimepicker"/>
+                                        <input type="time" class="form-control datetimepicker-input" placeholder="THỜI GIAN" data-target="#time" data-toggle="datetimepicker"/>
                                         <div class="input-group-append" data-target="#time" data-toggle="datetimepicker">
-                                            <div class="input-group-text"><i class="far fa-clock"></i></div>
+                                            <div class="input-group-text"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="SỐ LƯỢNG" required="required" />
-                                        <div class="input-group-append">
+                                        <input id=number type="text" class="form-control" placeholder="SỐ LƯỢNG" required="required" />
+<div class="input-group-append">
                                             <div class="input-group-text"><i class="far fa-user"></i></div>
                                         </div>
                                     </div>
